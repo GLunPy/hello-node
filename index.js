@@ -1,8 +1,9 @@
-var express = require('express');
-var app = express();
+const express = require('express')
+const path = require('path')
+const PORT = process.env.PORT || 5000
 
-app.use(express.static('templates'));
+.use(express.static(path.join(__dirname, 'templates')))
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(PORT, function () {
+  console.log('Example app listening on port 3000!')
 });
